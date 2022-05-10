@@ -1151,6 +1151,12 @@ h6 {
   }
 }
 
+.main-block__icon {
+  max-width: 50px;
+  width: 100%;
+  max-height: 50px;
+}
+
 .main-block__icon:not(:last-child) {
   margin: 0px 0px 9px 0px;
 }
@@ -1171,6 +1177,18 @@ h6 {
 @supports not (font-size: clamp( 2rem , 1.088660169rem  +  1.8986740926vw , 2.75rem )) {
   .main-block__label {
     font-size: calc(2rem + 0.75 * (100vw - 47.99875rem) / 39.50125);
+  }
+}
+
+@supports (font-size: clamp( 1.25rem , 0.534389313rem  +  3.0534351145vw , 2rem )) {
+  .main-block__label {
+    font-size: clamp( 1.25rem , 0.534389313rem  +  3.0534351145vw , 2rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.25rem , 0.534389313rem  +  3.0534351145vw , 2rem )) {
+  .main-block__label {
+    font-size: calc(1.25rem + 0.75 * (100vw - 23.43625rem) / 24.5625);
   }
 }
 
@@ -1957,6 +1975,11 @@ h6 {
 
   .main-block__body_delivery {
     padding: 0;
+  }
+
+  .main-block__icon {
+    max-width: 30px;
+    max-height: 30px;
   }
 
   .main-block__label {
