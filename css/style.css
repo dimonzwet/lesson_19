@@ -1454,7 +1454,11 @@ h6 {
 }
 
 .benefits__image {
-  max-height: 65px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .benefits__title {
@@ -2051,7 +2055,8 @@ h6 {
   }
 
   .benefits__image {
-    max-height: 45px;
+    width: 45px;
+    height: 45px;
   }
 
   .benefits__title {
