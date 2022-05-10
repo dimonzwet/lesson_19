@@ -229,18 +229,6 @@ h6 {
   text-decoration: underline;
 }
 
-@supports (margin-right: clamp( 1.125rem , 0.5286577608rem  +  2.5445292621vw , 1.75rem )) {
-  .item-header-top__contact {
-    margin-right: clamp( 1.125rem , 0.5286577608rem  +  2.5445292621vw , 1.75rem );
-  }
-}
-
-@supports not (margin-right: clamp( 1.125rem , 0.5286577608rem  +  2.5445292621vw , 1.75rem )) {
-  .item-header-top__contact {
-    margin-right: calc(1.125rem + 0.625 * (100vw - 23.43625rem) / 24.5625);
-  }
-}
-
 .item-header-top__tel {
   color: #fff;
 }
@@ -1715,9 +1703,17 @@ h6 {
     display: none;
   }
 
-  .item-header-top__contact {
-    margin: 0px 28px 0px 0px;
-  }
+@supports (margin-right: clamp( 1.125rem , 0.5286577608rem  +  2.5445292621vw , 1.75rem )) {
+    .item-header-top__contact {
+      margin-right: clamp( 1.125rem , 0.5286577608rem  +  2.5445292621vw , 1.75rem );
+    }
+}
+
+@supports not (margin-right: clamp( 1.125rem , 0.5286577608rem  +  2.5445292621vw , 1.75rem )) {
+    .item-header-top__contact {
+      margin-right: calc(1.125rem + 0.625 * (100vw - 23.43625rem) / 24.5625);
+    }
+}
 
   .item-header-top__tel {
     display: none;
