@@ -149,6 +149,21 @@ h6 {
   z-index: 50;
 }
 
+.header._header-scroll {
+  position: fixed;
+  top: -200%;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.header._header-show {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  top: 0;
+}
+
 .header-top {
   background-color: #020202;
   line-height: 44px;
@@ -1460,6 +1475,9 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 20px;
 }
 
 .benefits__item {
@@ -1660,8 +1678,11 @@ h6 {
             flex-direction: column;
   }
 
-  .benefits__item:not(:last-child) {
+  .benefits__item {
     padding: 0;
+  }
+
+  .benefits__item:not(:last-child) {
     margin: 0px 0px 20px 0px;
   }
 }
